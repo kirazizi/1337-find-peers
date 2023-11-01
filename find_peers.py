@@ -39,9 +39,10 @@ def welcome_message():
     print("\nPlease press Enter to continue.")
     try:
         input()
-    except KeyboardInterrupt:
+    except:
         print(Colors.FAIL + "\nYou interrupted the script. Goodbye!\n")
         exit()
+
 
 
 welcome_message()
@@ -55,7 +56,7 @@ def select_campus():
     print("3: Tétouan")
     try:
         campus_code = input("Enter your choice: ")
-    except KeyboardInterrupt:
+    except:
         print(Colors.FAIL + "\nYou interrupted the script. Goodbye!\n")
         exit()
     if campus_code == "1":
@@ -101,7 +102,7 @@ def select_project():
         print(f"{key}: {values[0]}")
     try:
         project_code = input("Enter your choice: ")
-    except KeyboardInterrupt:
+    except:
         print(Colors.FAIL + "\nYou interrupted the script. Goodbye!\n")
         exit()
     if project_code in project_mapping:
