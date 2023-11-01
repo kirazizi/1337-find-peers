@@ -74,44 +74,44 @@ os.system("clear")
 # the project selection part
 def select_project():
     project_mapping = {
-        "1": "libft",
-        "2": "get_next_line",
-        "3": "ft_printf",
-        "4": "born2beroot", #nt
-        "5": "so_long", #nt
-        "6": "fdf",
-        "7": "fract-ol",
-        "8": "minitalk", #nt
-        "9": "pipex", #nt
-        "10": "push_swap",
-        "11": "minishell",
-        "12": "philosophers",
-        "13": "cub3d", #nt
-        "14": "miniRT", #nt
-        "15": "netpractice", #nt
-        "16": "CPP", #nt
-        "17": "webserv", #nt
-        "18": "ft_irc", #nt
-        "19": "inception", #nt
-        "20": "ft_transcendence" #nt
+        "1": ["libft", "42cursus-libft"],
+        "2": ["get_next_line", "42cursus-get_next_line"],
+        "3": ["ft_printf", "42cursus-ft_printf"],
+        "4": ["born2beroot", "born2beroot"],
+        "5": ["so_long", "so_long"],
+        "6": ["fdf", "42cursus-fdf"],
+        "7": ["fract-ol", "42cursus-fract-ol"],
+        "8": ["minitalk", "minitalk"],
+        "9": ["pipex", "pipex"],
+        "10": ["push_swap", "42cursus-push_swap"],
+        "11": ["minishell", "42cursus-minishell"],
+        "12": ["philosophers", "42cursus-philosophers"],
+        "13": ["cub3d", "cub3d"],
+        "14": ["miniRT", "miniRT"],
+        "15": ["netpractice", "netpractice"],
+        "16": ["CPP", "CPP"],
+        "17": ["webserv", "webserv"],
+        "18": ["ft_irc", "ft_irc"],
+        "19": ["inception", "inception"],
+        "20": ["ft_transcendence", "ft_transcendence"]
     }
 
     print(Colors.BOLD + Colors.GREEN + "Choose your project:" + Colors.ENDC)
-    for key, value in project_mapping.items():
-        print(f"{key}: {value}")
+    for key, values in project_mapping.items():
+        print(f"{key}: {values[0]}")
     try:
         project_code = input("Enter your choice: ")
     except KeyboardInterrupt:
         print(Colors.FAIL + "\nYou interrupted the script. Goodbye!\n")
         exit()
     if project_code in project_mapping:
-        return project_mapping[project_code]
+        return project_mapping[project_code][1]
 
     print(Colors.WARNING + "Wrong input. Please select a valid option.")
     return select_project()
 
-not_yet = ["born2beroot", "so_long", "minitalk", "pipex", "cub3d", "miniRT", "netpractice", "CPP", "webserv",
-"ft_irc", "inception", "ft_transcendence"]
+
+not_yet = "CPP"
 
 select_project = select_project()
 os.system("clear")
@@ -155,7 +155,7 @@ token_data = {
 token_r = requests.post(token_url, data=token_data)
 token = token_r.json().get('access_token')
 
-endpoint = f"/v2/projects/42cursus-{select_project}/projects_users"
+endpoint = f"/v2/projects/{select_project}/projects_users"
 
 params = {
     'filter[campus]': campus_filter,
@@ -167,7 +167,7 @@ headers = {
 }
 response = requests.get(f"{BASE_API}{endpoint}", headers=headers, params=params)
 
-def filter_projects_by_pool_year(projects_users, target_year="2023"):
+def filter_projects_by_pool_year(projects_users, target_year="2021"):
     filtered_entries = [
         entry for entry in projects_users 
         if entry.get('user', {}).get('pool_year') == target_year
@@ -178,7 +178,7 @@ if response.status_code == 200:
     projects_users = response.json()
     filtered_data = filter_projects_by_pool_year(projects_users)
 
-    print(Colors.GREEN + f"----------- Peers {compus_status} on {select_project} 2023 -----------\n" + Colors.ENDC)
+    print(Colors.GREEN + f"----------- Peers {compus_status} on {select_project} 2021 -----------\n" + Colors.ENDC)
     for entry in filtered_data:
         user_info = entry.get('user', {})
         login = user_info.get('login', 'N/A')
@@ -203,8 +203,8 @@ if response.status_code == 200:
         print(Colors.BLUE + f"- Intra Link:" + Colors.ENDC + f" {intra_link}")
         print("---------------------------------------------------------------")
     
-    filtered_data = filter_projects_by_pool_year(projects_users, target_year="2021")
-    print(Colors.GREEN + f"----------- Peers {compus_status} on {select_project} 2021 -----------\n" + Colors.ENDC)
+    filtered_data = filter_projects_by_pool_year(projects_users, target_year="2023")
+    print(Colors.GREEN + f"----------- Peers {compus_status} on {select_project} 2023 -----------\n" + Colors.ENDC)
     for entry in filtered_data:
         user_info = entry.get('user', {})
         login = user_info.get('login', 'N/A')
