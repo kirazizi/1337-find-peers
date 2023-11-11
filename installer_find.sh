@@ -29,7 +29,7 @@ move_project_dir_to_home () {
     # Move the current project directory to the home directory
     current_dir="$(pwd)"
     cd ..
-    mv "$current_dir" "$HOME/1337_find_peers"
+    mv "$current_dir" "$HOME/1337-find-peers"
 }
 
 
