@@ -9,6 +9,8 @@ source venv/bin/activate
 # Install the requests library using pip
 pip install requests
 
+# hide the output of 
+
 # Run the script
 python src/find_peers.py
 
