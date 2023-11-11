@@ -32,6 +32,10 @@ Welcome to 1337 Find Peers! This project is designed to simplify the process of 
 
 3. Enjoy!
 
+## ScreenShot
+
+![Alt Text](https://github.com/kirazizi/1337-find-peers/blob/master/src/finder.png)
+
 ## Support and Issues
 
 If you encounter any issues or have suggestions, feel free to open an [issue](https://github.com/kirazizi/1337-find-peers/issues).
