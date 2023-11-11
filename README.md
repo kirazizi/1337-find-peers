@@ -2,12 +2,12 @@
 
 ## Introduction
 
-Welcome to 1337 Find Peers! This script helps you find peers for your 42 projects by utilizing the 42 API.
+Welcome to 1337 Find Peers! This script helps you find peers for your 1337 projects.
 
 ## Prerequisites
 
-- Python 3
-- `requests` library (`pip install requests`)
+- Python
+- Bash
 
 ## Getting Started
 
