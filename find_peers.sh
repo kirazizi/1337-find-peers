@@ -10,7 +10,7 @@ source venv/bin/activate
 pip install requests
 
 # Run the script
-python src/find_peers.py
+python $HOME/1337-find-peers/src/find_peers.py
 
 # Deactivate the virtual environment
 deactivate
