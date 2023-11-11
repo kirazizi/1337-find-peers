@@ -30,7 +30,7 @@ move_project_dir_to_home () {
     current_dir="$(pwd)"
 
     if [[ "${current_dir}" == "${HOME}/1337-find-peers" ]]; then
-        echo "Directory is already in the home directory."
+        return
     else
         cd ..
         mv "$current_dir" "$HOME"
