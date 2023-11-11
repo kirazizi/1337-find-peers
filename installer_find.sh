@@ -28,15 +28,8 @@ set_new_alias() {
 move_project_dir_to_home () {
     # Move the current project directory to the home directory
     current_dir="$(pwd)"
-
-    if [[ "${current_dir}" == "${HOME}/1337-find-peers" ]]; then
-        return
-    else
-        cd ..
-        mv "$current_dir" "$HOME"
-    fi
-    # cd ..
-    # mv "$current_dir" "$HOME/1337-find-peers"
+    cd ..
+    mv -f "$current_dir" "$HOME"
 }
 
 move_project_dir_to_home
