@@ -27,7 +27,9 @@ set_new_alias() {
 
 move_project_dir_to_home () {
     # Move the current project directory to the home directory
-    mv "$(pwd)" "${HOME}"
+    current_dir="$(pwd)"
+    cd ..
+    mv "${current_dir}" "${HOME}"
 }
 
 
