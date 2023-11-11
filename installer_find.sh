@@ -11,7 +11,7 @@ set_new_alias() {
     shell_f="${HOME}/.${shell_f}rc"
 
     # Define the alias
-    alias_cmd="alias peerfinder='bash <(curl -s https://raw.githubusercontent.com/kirazizi/1337-find-peers/master/find_peers.sh)'"
+    alias_cmd="alias peerfinder='bash ${HOME}/1337-find-peers/find_peers.sh'"
 
     # Add the alias to the shell configuration file if it doesn't exist
     if ! grep -q "$alias_cmd" "$shell_f"; then
@@ -20,11 +20,16 @@ set_new_alias() {
 +--------------------------------------------------------+
 | Run this command \"${RED}source $shell_f${NO_COLOR}\"  |
 | to be able to run the script directly by typing        |
-| \"${CYAN}peerfinder${NO_COLOR}\" in your terminal.      |
+| \"${CYAN}peerfinder${NO_COLOR}\" in your terminal.     |
 +--------------------------------------------------------+"
     fi
 }
 
+move_project_dir_to_home () {
+    # Move the project directory to the home directory
+    mv 1337-find-peers "$HOME"
+}
+
 # Call the function to set the new alias
 set_new_alias
-
+move_project_dir_to_home
