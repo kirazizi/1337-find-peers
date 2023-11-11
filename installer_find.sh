@@ -27,9 +27,10 @@ set_new_alias() {
 
 move_project_dir_to_home () {
     # Move the current project directory to the home directory
-    mv "$(pwd)" "${HOME}/1337-find-peers"
+    mv "$(pwd)" "${HOME}"
 }
 
 # Call the function to set the new alias
 set_new_alias
+
 move_project_dir_to_home
