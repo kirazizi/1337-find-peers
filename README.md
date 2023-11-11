@@ -7,7 +7,6 @@ Welcome to 1337 Find Peers! This project is designed to simplify the process of 
 ## Prerequisites
 
 - Python
-- Bash
 
 ## Getting Started
 

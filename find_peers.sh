@@ -17,6 +17,3 @@ deactivate
 
 # Remove the virtual environment
 rm -rf venv
-
-# Display a message indicating the script has completed
-echo "script completed."
