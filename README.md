@@ -13,7 +13,7 @@ Welcome to 1337 Find Peers! This project is designed to simplify the process of 
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/kirazizi/1337-find-peers.git
+    git clone https://github.com/kirazizi/1337-find-peers.git && cd 1337-find-peers
     ```
 
 2. Install the script:
