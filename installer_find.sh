@@ -30,7 +30,8 @@ move_project_dir_to_home () {
     mv "$(pwd)" "${HOME}"
 }
 
-# Call the function to set the new alias
-set_new_alias
 
 move_project_dir_to_home
+
+# Call the function to set the new alias
+set_new_alias
