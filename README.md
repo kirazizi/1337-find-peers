@@ -14,13 +14,17 @@ Welcome to 1337 Find Peers! This project is designed to simplify the process of 
 
     ```bash
     git clone https://github.com/kirazizi/1337-find-peers.git
-    cd 1337-find-peers
     ```
 
-2. Run the script:
+2. Install the script:
 
     ```bash
     ./find_peers.sh
+    ```
+
+3. Run:
+
+    ```peerfinder
     ```
 
 ## Usage
