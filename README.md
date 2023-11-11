@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to 1337 Find Peers! This script helps you find peers for your 1337 projects.
+Welcome to 1337 Find Peers! This project is designed to simplify the process of finding peers for your 42 projects using the 42 API. Whether you're seeking collaborators, want to connect with fellow learners, or need assistance on a specific project, this script can help you discover like-minded individuals.
 
 ## Prerequisites
 
