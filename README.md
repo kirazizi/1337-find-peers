@@ -24,7 +24,8 @@ Welcome to 1337 Find Peers! This project is designed to simplify the process of 
 
 3. Run:
 
-    ```peerfinder
+    ```bash
+    peerfinder
     ```
 
 ## Usage
