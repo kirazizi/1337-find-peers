@@ -28,8 +28,8 @@ def welcome_message():
 	"""
 
 	print(Colors.FAIL + ascii_art + Colors.ENDC)
-	print(Colors.BOLD + Colors.GREEN + "\t\t\t  Welcome to 1337 Find Peers" + Colors.ENDC)
-	print(Colors.BOLD + Colors.GREEN + "\t\t\t  --------------------------" + Colors.ENDC)
+	print(Colors.BOLD + Colors.GREEN + "\t\t\t\t\t  Welcome to 1337 Find Peers" + Colors.ENDC)
+	print(Colors.BOLD + Colors.GREEN + "\t\t\t\t\t  --------------------------" + Colors.ENDC)
 	print("\n\033[3mThis script will help you find peers for your project.")
 	print("------------------------------------------------------\n")
 	print(Colors.ENDC + "You can report any issue to me in:")
