@@ -1,5 +1,4 @@
 import requests
-import curses
 import json
 import os
 
@@ -18,12 +17,6 @@ class Colors:
 UID = "u-s4t2ud-4ec846675c48e7bf0bd2d48717ebcb0bf1f4d47746a0fb33e25bcab80f6e22d5"
 SECRET = "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"
 os.system("clear")
-
-def set_terminal_size(rows, cols):
-    curses.setupterm()
-    curses.tputwinsize(0, rows, cols)
-
-set_terminal_size(100, 40)
 
 # welcome message part
 def welcome_message():
