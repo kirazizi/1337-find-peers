@@ -11,7 +11,7 @@ set_new_alias() {
     shell_f="${HOME}/.${shell_f}rc"
 
     # Define the alias
-    alias_cmd="alias peerfinder='bash ${HOME}/1337-find-peers/find_peers.sh'"
+    alias_cmd="alias peerfinder='bash ${HOME}/1337-find-peers/src/find_peers.sh'"
 
     # Add the alias to the shell configuration file if it doesn't exist
     if ! grep -q "$alias_cmd" "$shell_f"; then
