@@ -15,7 +15,7 @@ class Colors:
 
 # Collect user input for API credentials
 UID = "u-s4t2ud-4ec846675c48e7bf0bd2d48717ebcb0bf1f4d47746a0fb33e25bcab80f6e22d5"
-SECRET = "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"
+SECRET = "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"
 os.system("clear")
 
 # welcome message part
@@ -116,8 +116,34 @@ not_yet = "CPP"
 select_project = select_project()
 os.system("clear")
 if select_project in not_yet:
-	print(Colors.FAIL + "Sorry, this project is not supported yet.")
-	exit()
+	os.system("clear")
+	day_mapping = {
+		"0": ["cpp00", "cpp-module-00"],
+		"1": ["cpp01", "cpp-module-01"],
+		"2": ["cpp02", "cpp-module-02"],
+		"3": ["cpp03", "cpp-module-03"],
+		"4": ["cpp04", "cpp-module-04"],
+		"5": ["cpp05", "cpp-module-05"],
+		"6": ["cpp06", "cpp-module-06"],
+		"7": ["cpp07", "cpp-module-07"],
+		"8": ["cpp08", "cpp-module-08"],
+		"9": ["cpp09", "cpp-module-09"]
+	}
+	print(Colors.BOLD + Colors.GREEN + "Choose your day:" + Colors.ENDC)
+	for key, values in day_mapping.items():
+		print(f"{key}: {values[0]}")
+	try:
+		day_code = input("Enter your choice: ")
+	except:
+		print(Colors.FAIL + "\nYou interrupted the script. Goodbye!\n")
+		exit()
+	if day_code in day_mapping:
+		select_project = day_mapping[day_code][1]
+	else:
+		print(Colors.WARNING + "Wrong input. Please select a valid option.")
+		select_project = select_project()
+
+os.system("clear")
 
 # status selection part
 def select_status():
@@ -218,3 +244,4 @@ if response.status_code == 200:
 else:
 	print(Colors.FAIL + f"Error: Unable to fetch data (Status code: {response.status_code})")
 	print(response.text + Colors.ENDC)
+
